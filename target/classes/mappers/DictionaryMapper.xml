@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!--*** 인터페이스 이름(com.plant.mapper.MemberMapper)과 xml의 namespace 속성값이 일치해야함 ****-->
+<mapper namespace="com.plant.mapper.DictionaryMapper">
+
+
+			<!--사전 관련-->
+
+	<select id="getKname" resultType="com.plant.dto.Dictionary"> <!--인터페이스 메소드 이름-->
+	<!-- ***반드시 dto.Member 에 있는 필드와 프로시저에서 던지는 필드 값이 일치해야!*** -->
+		select * from dictionary where seqno = #{seqno} <!--sql 문의 ? 물음표와 같은 것 -->
+	</select>
+
+	<select id="dictionList" resultType="com.plant.dto.Dictionary">
+	
+	</select>
+	
+	<select id="dictionInList" resultType="com.plant.dto.Dictionary">
+	
+	</select>
+	
+	<select id="dictionOutList" resultType="com.plant.dto.Dictionary">
+	
+	</select>
+
+	<select id="dictionDetail" resultType="com.plant.dto.Dictionary">
+	
+	</select> 
+	
+	<insert id="dictionInsert">
+	
+	</insert>
+	
+	<update id="dictionUpdate">
+	
+	</update>
+	
+	<delete id="dictionDelete">
+	
+	</delete>
+
+
+
+		<!--회원 식물 관련 -->
+		
+	<select id="mplantList" resultType="com.plant.dto.Mplant">
+	
+	</select>
+	
+	<select id="mplantDetail" resultType="com.plant.dto.Mplant">
+	
+	</select>
+	
+	<insert id="mplantInsert">
+	
+	</insert>
+	
+	<update id="mplantUpdate">
+	
+	</update>
+	
+	<delete id="mplantDelete">
+	
+	</delete>
+</mapper>
